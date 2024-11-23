@@ -1,6 +1,30 @@
-@web_api_HostAddress = http://localhost:5064
 
-GET {{web_api_HostAddress}}/weatherforecast/
-Accept: application/json
+GET http://localhost:5064
 
 ###
+
+GET http://localhost:5064/api/categories
+
+###
+
+GET http://localhost:5064/api/categories/2793daa2-8555-45db-b6a7-322fe6d0b530
+
+###
+
+POST http://localhost:5064/api/categories
+Content-Type: application/json
+
+{
+   "name": "Smart Phone",
+   "description": "Description of smart phones passing in the request body"
+}
+###
+PUT http://localhost:5064/api/categories/ec075c18-6472-435c-843d-7854532b870a
+Content-Type: application/json
+
+{
+   "name": "Smart Phones 3",
+   "description": "Description of phones passing in the request body"
+}
+###
+DELETE http://localhost:5064/api/categories/ec075c18-6472-435c-843d-7854532b870a
